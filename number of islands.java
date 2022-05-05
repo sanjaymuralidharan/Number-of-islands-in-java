@@ -1,4 +1,8 @@
-class Solution {
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main {
     public int numIslands(char[][] grid) {
         int count=0;
         for(int i=0;i<grid.length;i++)
@@ -27,4 +31,19 @@ class Solution {
         bfs(grid,i,j-1);
              
     }
+    public static void main(String[] args)
+        {
+            Scanner sc=new Scanner(System.in);
+            int m=sc.nextInt(),n=sc.nextInt();
+            char [][]arr = new char[m][n];
+            Main Obj = new Main();
+            for(int i=0;i<m;i++)
+            {
+                for(int j=0;j<n;j++)
+                {
+                    arr[i][j]=sc.next().charAt(0);
+                }
+            }
+            System.out.println("Number of islands is: " + Obj.numIslands(arr));
+        }
 }
